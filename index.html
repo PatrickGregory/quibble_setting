@@ -17,16 +17,14 @@
     <title>Settings</title>
 </head>
 
-<body>
+<body class="bg-dark">
     <!-- NavBar Section -->
-    <nav class="navbar navbar-expand-lg fixed-top shadow bg-dark bg-tertiary">
+    <nav class="navbar navbar-expand-lg fixed-top shadow bg-dark">
         <div class="container-fluid" id="content">
-            <button class="btn bg-white navbar-toggler p-2 navbar-toggler-icon" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></button>
             <a class="navbar-brand" href="#">
                 <img src="./images/Quibbles_Logo.png" alt="logo">
             </a>
-            <input class="form-control w-50 me-2 d-none d-md-block bg-dark rounded-pill" type="search"
+            <input class="form-control w-50 me-2 d-none text-white-50 d-md-block bg-dark rounded-pill" type="search"
                 placeholder="Search" aria-label="Search" />
 
             <div class="d-inline-flex gap-2">
@@ -40,8 +38,8 @@
             </div>
             <div class="collapse w-100 d-md-none" id="collapseExample">
                 <div>
-                    <input class="form-control w-100 rounded-pill bg-dark me-2" type="search" placeholder="Search"
-                        aria-label="Search" />
+                    <input class="form-control w-100 rounded-pill bg-dark text-white-50 me-2" type="search"
+                        placeholder="Search" aria-label="Search" />
                 </div>
             </div>
         </div>
@@ -50,26 +48,78 @@
     <!-- Content -->
     <div class="container">
         <nav class="tab-edit">
-            <div class="nav nav-underline nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                    type="button" role="tab" aria-controls="nav-home" aria-selected="true">Accounts</button>
-                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
-                    type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Password</button>
-                <button class="nav-link" id="nav-notify-tab" data-bs-toggle="tab" data-bs-target="#nav-notify"
-                    type="button" role="tab" aria-controls="nav-notify" aria-selected="false">Notifications</button>
-                <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled"
-                    type="button" role="tab" aria-controls="nav-disabled" aria-selected="false"
-                    disabled>Disabled</button>
+            <h2 class="text-white">Setting</h2>
+            <div class="nav nav-underline nav-tabs border border-0" id="nav-tab" role="tablist">
+                <button class="nav-link bg-dark border-top-0 border-start-0 border-end-0 active text-white"
+                    id="nav-account-tab" data-bs-toggle="tab" data-bs-target="#nav-account" type="button" role="tab"
+                    aria-controls="nav-account" aria-selected="true">Accounts</button>
+                <button class="nav-link bg-dark text-white border-top-0 border-start-0 border-end-0"
+                    id="nav-password-tab" data-bs-toggle="tab" data-bs-target="#nav-password" type="button" role="tab"
+                    aria-controls="nav-password" aria-selected="false">Password</button>
+                <button class="nav-link bg-dark text-white border-top-0 border-start-0 border-end-0" id="nav-notify-tab"
+                    data-bs-toggle="tab" data-bs-target="#nav-notify" type="button" role="tab"
+                    aria-controls="nav-notify" aria-selected="false">Notifications</button>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
-                tabindex="0">...</div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-                ...
+            <div class="tab-pane fade show active text-white-50" id="nav-account" role="tabpanel"
+                aria-labelledby="nav-account-tab" tabindex="0">
+                <h5 class="my-3">General</h5>
             </div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-                ...
+            <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab"
+                tabindex="0">
+                <h5 class=" text-white-50 mt-3">Change Password</h5>
+                <div class="d-flex justify-content-center">
+                    <form class="text-white-50 w-75 align-items-center my-3">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Old Password</label>
+                            <input type="password" class="form-control rounded-pill bg-none" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">New Password</label>
+                            <input type="password" class="form-control rounded-pill bg-none" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-control rounded-pill bg-none" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-outline-secondary rounded-pill">Save</button>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-notify" role="tabpanel" aria-labelledby="nav-notify-tab" tabindex="0">
+                <h5 class="text-white-50 mt-3">Notifications</h5>
+                <form action="#">
+                    <div class="mb-3">
+                        <label for="checkboxNoLabel" class=" text-white">Email Notifications</label>
+                        <input class="form-check-input bg-dark ms-3" type="checkbox" id="checkboxNoLabel" value=""
+                            aria-label="..." checked>
+                    </div>
+                    <div class="mb-3">
+                        <label for="checkboxNoLabel" class=" text-white">Push Notifications</label>
+                        <input class="form-check-input bg-dark ms-3" type="checkbox" id="checkboxNoLabel" value=""
+                            aria-label="...">
+                    </div>
+                    <div>
+                        <p class="text-white">Notification Frequency</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
+                                id="inlineRadio1" value="option1" checked>
+                            <label class="form-check-label text-white" for="inlineRadio1">Immediately</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
+                                id="inlineRadio2" value="option2">
+                            <label class="form-check-label text-white" for="inlineRadio2">Daily</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
+                                id="inlineRadio3" value="option3">
+                            <label class="form-check-label text-white" for="inlineRadio3">Weekly</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn d-block btn-outline-secondary rounded-pill">Save</button>
+                </form>
             </div>
         </div>
     </div>
