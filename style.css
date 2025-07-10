@@ -2,3 +2,18 @@
 .tab-edit{
     margin-top: 100px;
 }
+
+.smaller-text{
+    font-size: 0.8rem;
+}
+
+.chevron-margin{
+    margin-top: -0.7rem;
+}
+
+.modal-placeholder::placeholder {
+  color: #ffffff80;
+  opacity: 1;
+}
+
+;

@@ -65,6 +65,34 @@
             <div class="tab-pane fade show active text-white-50" id="nav-account" role="tabpanel"
                 aria-labelledby="nav-account-tab" tabindex="0">
                 <h5 class="my-3">General</h5>
+
+                <div class="d-flex mt-5">
+                    <p>Change Username</p>
+                    <div class="ms-auto d-inline-flex">
+                        <button class="btn bg-none w-50  border border-0 text-white-50 chevron-margin"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <p>Change Email</p>
+                    <div class="ms-auto d-inline-flex">
+                        <p class="smaller-text mt-1">
+                            current@mail.com
+                        </p>
+                        <button class="btn bg-none w-50  border border-0 text-white-50 chevron-margin"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal1"><i
+                                class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <p>Update Bio</p>
+                    <div class="ms-auto d-inline-flex">
+                        <button class="btn bg-none w-50  border border-0 text-white-50 chevron-margin"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
+                                class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab"
                 tabindex="0">
@@ -101,25 +129,77 @@
                             aria-label="...">
                     </div>
                     <div>
-                        <p class="text-white">Notification Frequency</p>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
-                                id="inlineRadio1" value="option1" checked>
-                            <label class="form-check-label text-white" for="inlineRadio1">Immediately</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
-                                id="inlineRadio2" value="option2">
-                            <label class="form-check-label text-white" for="inlineRadio2">Daily</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
-                                id="inlineRadio3" value="option3">
-                            <label class="form-check-label text-white" for="inlineRadio3">Weekly</label>
+                        <p class="text-white fw-bold">Notification Frequency</p>
+                        <div style="margin-top: -1rem;">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
+                                    id="inlineRadio1" value="option1" checked>
+                                <label class="form-check-label text-white" for="inlineRadio1">Immediately</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
+                                    id="inlineRadio2" value="option2">
+                                <label class="form-check-label text-white" for="inlineRadio2">Daily</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
+                                    id="inlineRadio3" value="option3">
+                                <label class="form-check-label text-white" for="inlineRadio3">Weekly</label>
+                            </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn d-block btn-outline-secondary rounded-pill">Save</button>
+                    <button type="submit" class="btn my-3 d-block btn-outline-secondary rounded-pill">Save</button>
                 </form>
+            </div>
+
+            <!-- Username Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-white-50" id="exampleModalLabel">Change Username</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#" class="align-items-center ">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control text-white-50 my-2 bg-dark modal-placeholder" id="exampleFormControlInput1"
+                                        placeholder="New Username">
+                                    
+                                    <input type="text" placeholder="Paste code sent to example*****@ourmail.com" id="inputPassword5"
+                                        class="form-control mb-2 text-white-50 bg-dark modal-placeholder" aria-describedby="passwordHelpBlock">
+                                        <a href="#" class="d-block mb-3">Send Code</a>
+                                    <button class="btn btn-outline-secondary rounded-pill" type="button">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-white-50" id="exampleModalLabel1">Change Email</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#" class="align-items-center ">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control text-white-50 my-2 bg-dark modal-placeholder" id="exampleFormControlInput1"
+                                        placeholder="New Email">
+                                    
+                                    <input type="text" placeholder="Paste code sent to example*****@ourmail.com" id="inputPassword5"
+                                        class="form-control mb-2 text-white-50 bg-dark modal-placeholder" aria-describedby="passwordHelpBlock">
+                                        <a href="#" class="d-block mb-3">Send Code</a>
+                                    <button class="btn btn-outline-secondary rounded-pill" type="button">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
